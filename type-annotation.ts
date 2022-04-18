@@ -46,5 +46,12 @@ let my_name_second = 'Shibata Hiroki'
 
 my_name_second.toUpperCase()
 
-const ageList = [30, 40, 50]
-ageList[0].toUpperCase()
+// const ageList = [30, 40, 50]
+// ageList[0].toUpperCase()
+
+const sayHello_second = (name: string): string => {
+  return `Hello, ${name}!`
+}
+
+const val1 = sayHello_second('Shibata Hiroki')
+const val2 = sayHello_second(123)
