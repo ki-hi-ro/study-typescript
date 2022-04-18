@@ -67,4 +67,6 @@ const getFullName = (person: Person) => {
 }
 
 const largeFullName =
-console.log(getFullName({ firstName: 'Shibata', lastName: 'Hiroki', age: 28}).toUpperCase())
+  console.log(getFullName({ firstName: 'Shibata', lastName: 'Hiroki', age: 28 }).toUpperCase())
+
+const myName: 'Shibata Hiroki' = 'Shibata Hiroki'
