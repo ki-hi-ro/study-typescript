@@ -19,13 +19,24 @@ var person = {
     age: 28
 };
 console.log(person.name);
-var getName = function (person) {
-    return person.name;
-};
-var getAge = function (person) {
-    return person.age;
-};
+// interface Person {
+//   name: string
+//   age: number
+// }
+// const getName = (person: Person) => {
+//   return person.name
+// }
+// const getAge = (person: Person) => {
+//   return person.age
+// }
 var my_name_second = 'Shibata Hiroki';
 my_name_second.toUpperCase();
 // const ageList = [30, 40, 50]
 // ageList[0].toUpperCase()
+var sayHello_second = function (name) {
+    return "Hello, ".concat(name, "!");
+};
+var getFullName = function (person) {
+    return "".concat(person.firstName, " ").concat(person.lastName);
+};
+var largeFullName = console.log(getFullName({ firstName: 'Shibata', lastName: 'Hiroki', age: 28 }).toUpperCase());

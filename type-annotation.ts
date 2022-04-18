@@ -30,17 +30,17 @@ const person: {
 }
 console.log(person.name)
 
-interface Person {
-  name: string
-  age: number
-}
+// interface Person {
+//   name: string
+//   age: number
+// }
 
-const getName = (person: Person) => {
-  return person.name
-}
-const getAge = (person: Person) => {
-  return person.age
-}
+// const getName = (person: Person) => {
+//   return person.name
+// }
+// const getAge = (person: Person) => {
+//   return person.age
+// }
 
 let my_name_second = 'Shibata Hiroki'
 
@@ -53,5 +53,18 @@ const sayHello_second = (name: string): string => {
   return `Hello, ${name}!`
 }
 
-const val1 = sayHello_second('Shibata Hiroki')
-const val2 = sayHello_second(123)
+// const val1 = sayHello_second('Shibata Hiroki')
+// const val2 = sayHello_second(123)
+
+interface Person {
+  firstName: string
+  lastName: string
+  age: number
+}
+
+const getFullName = (person: Person) => {
+  return `${person.firstName} ${person.lastName}`
+}
+
+const largeFullName =
+console.log(getFullName({ firstName: 'Shibata', lastName: 'Hiroki', age: 28}).toUpperCase())
