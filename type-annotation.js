@@ -19,3 +19,14 @@ var person = {
     age: 28
 };
 console.log(person.name);
+var getName = function (person) {
+    return person.name;
+};
+var getAge = function (person) {
+    return person.age;
+};
+var my_name_second = 'Shibata Hiroki';
+console.log(my_name_second.toUpperCase());
+
+const ageList = [30, 40, 50]
+console.log(ageList[0].toUpperCase())

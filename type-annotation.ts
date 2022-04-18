@@ -41,3 +41,10 @@ const getName = (person: Person) => {
 const getAge = (person: Person) => {
   return person.age
 }
+
+let my_name_second = 'Shibata Hiroki'
+
+my_name_second.toUpperCase()
+
+const ageList = [30, 40, 50]
+ageList[0].toUpperCase()
