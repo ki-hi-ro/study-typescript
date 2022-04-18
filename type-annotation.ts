@@ -1,4 +1,5 @@
-let my_name: string = 'Shibata Hiroki'
+let my_name = 'Shibata Hiroki'
+console.log(my_name.toLowerCase());
 
 const empty_name: string = ""
 

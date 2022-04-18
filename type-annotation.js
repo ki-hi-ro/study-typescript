@@ -1,4 +1,5 @@
 var my_name = 'Shibata Hiroki';
+console.log(my_name.toLowerCase());
 var empty_name = "";
 var firstName = 'Hiroki';
 var lastName = 'Shibata';
@@ -40,3 +41,4 @@ var getFullName = function (person) {
     return "".concat(person.firstName, " ").concat(person.lastName);
 };
 var largeFullName = console.log(getFullName({ firstName: 'Shibata', lastName: 'Hiroki', age: 28 }).toUpperCase());
+var myName = 'Shibata Hiroki';
