@@ -10,7 +10,7 @@ const promptInput = async (text: string) => {
 }
 
 class HitAndBlow {
-  private answerSource = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+  private readonly answerSource = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
   private answer: string[] = []
   private tryCount = 0
 
