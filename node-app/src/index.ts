@@ -93,7 +93,7 @@ class HitAndBlow {
 }
 
   ;(async () => {
-    const hitAndBlow = new HitAndBlow('hard')
+    const hitAndBlow = new HitAndBlow('normal')
     hitAndBlow.setting()
     await hitAndBlow.play()
     hitAndBlow.end()

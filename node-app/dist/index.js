@@ -148,7 +148,7 @@ var HitAndBlow = /** @class */ (function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                hitAndBlow = new HitAndBlow('hard');
+                hitAndBlow = new HitAndBlow('normal');
                 hitAndBlow.setting();
                 return [4 /*yield*/, hitAndBlow.play()];
             case 1:
