@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var printLine = function (text, breakLine) {
     if (breakLine === void 0) { breakLine = true; }
-    process.stdout.write(text + (breakLine ? 'n' : ''));
+    process.stdout.write(text + (breakLine ? '\n' : ''));
 };
 var promptInput = function (text) { return __awaiter(void 0, void 0, void 0, function () {
     var input;
@@ -112,7 +112,7 @@ var HitAndBlow = /** @class */ (function () {
         };
     };
     HitAndBlow.prototype.end = function () {
-        printLine("\u6B63\u89E3\u3067\u3059\uFF01\n\u8A66\u884C\u56DE\u6570: " + this.tryCount + "\u56DE");
+        printLine("\u6B63\u89E3\u3067\u3059\uFF01\n\u8A66\u884C\u56DE\u6570: " + this.tryCount + "\u56DE\n");
         process.exit();
     };
     return HitAndBlow;

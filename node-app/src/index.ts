@@ -61,6 +61,13 @@ class HitAndBlow {
     printLine(`正解です！\n試行回数: ${this.tryCount}回\n`)
     process.exit()
   }
+
+  private validate(inputArr: string[]) {
+    const isLengthValid = inputArr.length === this.answer.length
+    const isAllAnswerSourseOption = inputArr.every((val) => this.answerSource.includes(val))
+    const isAllDifferentValues = inputArr.every((val, i) => inputArr.indexOf(val) === i)
+    return isLengthValid && isAllAnswerSourseOption && isAllDifferentValues
+  }
 }
 
   ;(async () => {
