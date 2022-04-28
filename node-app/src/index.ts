@@ -13,14 +13,14 @@ const readLine = async () => {
   return input.trim()
 }
 
-const promptSelect = async <T>(text: string, values: readonly string[]): Promise<T> => {
+const promptSelect = async <T extends string>(text: string, values: readonly string[]): Promise<T> => {
   printLine(`\n${text}`)
   values.forEach((value) => {
     printLine(`- ${value}`)
   })
   printLine(`> `, false)
 
-  const input = await readLine()
+  const input = (await readLine()) as T
   if (values.includes(input)) {
     return input
   } else {
