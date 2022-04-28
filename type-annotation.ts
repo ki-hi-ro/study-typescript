@@ -17,10 +17,10 @@ const list: number[] = [1, 2, 3]
 list.push(4)
 console.log(list)
 
-const sayHello: (name: string) => string = (name: string): string => {
-  return `Hello, ${name}!`
-}
-console.log(sayHello('shibata'))
+// const sayHello: (name: string) => string = (name: string): string => {
+//   return `Hello, ${name}!`
+// }
+// console.log(sayHello('shibata'))
 
 const person: {
   name: string
