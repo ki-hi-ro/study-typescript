@@ -37,7 +37,7 @@ class HitAndBlow {
   private mode: Mode = 'normal'
 
   async setting() {
-    this.mode = await promptInput('モードを入力してください。') as Mode
+    this.mode = await promptSelect('モードを入力してください。', ['normal', 'hard']) as Mode
     const answerLength = this.getAnswerLength()
 
     while (this.answer.length < answerLength) {
