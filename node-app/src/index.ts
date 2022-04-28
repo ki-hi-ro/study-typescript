@@ -4,8 +4,12 @@ const printLine = (text: string, breakLine: boolean = true) => {
 
 const promptInput = async (text: string) => {
   printLine(`\n${text}\n>`, false)
-  const input: string = await new Promise((resolve) => process.stdin.once('data', (data) =>
-    resolve(data.toString())))
+  return readLine()
+}
+
+const readLine = async () => {
+  const input: string = await new Promise((resolve) =>
+                          process.stdin.once('data', (data) => resolve(data.toString())))
   return input.trim()
 }
 
