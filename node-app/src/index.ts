@@ -13,6 +13,21 @@ const readLine = async () => {
   return input.trim()
 }
 
+const promptSelect = async (text: string, values: readonly string[]): Promise<string> => {
+  printLine(`\n${text}`)
+  values.forEach((value) => {
+    printLine(`- ${value}`)
+  })
+  printLine(`> `, false)
+
+  const input = await readLine()
+  if (values.includes(input)) {
+    return input
+  } else {
+    return promptSelect(text, values)
+  }
+}
+
 type Mode = 'normal' | 'hard'
 
 class HitAndBlow {
