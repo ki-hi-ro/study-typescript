@@ -50,6 +50,11 @@ class GameProcedure {
     await this.play()
   }
 
+  private async select() {
+    this.currentGameTitle = await promptSelect<GameTitle>('ゲームのタイトルを入力してください', gameTitles)
+    this.currentGame = this.gameStore[this.currentGameTitle]
+  }
+
   private async play() {
     if(!this.currentGame) throw new ErrorEvent('ゲームが選択されていません')
     printLine(`===\n${this.currentGameTitle} を開始します。\n==`)
