@@ -31,6 +31,9 @@ const promptSelect = async <T extends string>(text: string, values: readonly str
 const modes = ['normal', 'hard'] as const
 type Mode = typeof modes[number]
 
+const nextActions = ['play again', 'exit'] as const
+type nextActions = typeof nextActions[number]
+
 class GameProcedure {
   private currentGameTitle = 'Hit and blow'
   private currentGame = new HitAndBlow()
