@@ -31,6 +31,28 @@ const promptSelect = async <T extends string>(text: string, values: readonly str
 const modes = ['normal', 'hard'] as const
 type Mode = typeof modes[number]
 
+class GameProcedure {
+  private currentGameTitle = 'Hit and blow'
+  private currentGame = new HitAndBlow()
+
+  public async start() {
+    await this.play()
+  }
+
+  private async play() {
+    printLine(`===\n${this.currentGameTitle} を開始します。\n==`)
+    await this.currentGame.setting()
+    await this.currentGame.play()
+    this.currentGame.end()
+    this.end()
+  }
+
+  private end() {
+    printLine('ゲームを終了しました。')
+    process.exit()
+  }
+}
+
 class HitAndBlow {
   private readonly answerSource = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
   private answer: string[] = []
@@ -91,7 +113,6 @@ class HitAndBlow {
 
   end() {
     printLine(`正解です！\n試行回数: ${this.tryCount}回\n`)
-    process.exit()
   }
 
   private validate(inputArr: string[]) {
