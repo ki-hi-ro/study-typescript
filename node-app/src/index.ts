@@ -31,6 +31,9 @@ const promptSelect = async <T extends string>(text: string, values: readonly T[]
 const nextActions = ['play again', 'exit'] as const
 type NextAction = typeof nextActions[number]
 
+const gameTitles = ['hit and blow', 'janken'] as const
+type GameTitle = typeof gameTitles[number]
+
 type GameStore = {
   'hit and blow': HitAndBlow
   'janken': Janken
@@ -43,6 +46,7 @@ class GameProcedure {
   constructor(private readonly gameStore: GameStore) {}
 
   public async start() {
+    await this.select()
     await this.play()
   }
 
