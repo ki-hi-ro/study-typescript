@@ -82,6 +82,7 @@ var promptSelect = function (text, values) { return __awaiter(void 0, void 0, vo
     });
 }); };
 var modes = ['normal', 'hard'];
+var nextActions = ['play again', 'exit'];
 var GameProcedure = /** @class */ (function () {
     function GameProcedure() {
         this.currentGameTitle = 'Hit and blow';
@@ -101,6 +102,7 @@ var GameProcedure = /** @class */ (function () {
     };
     GameProcedure.prototype.play = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var action, neverValue;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -112,8 +114,24 @@ var GameProcedure = /** @class */ (function () {
                     case 2:
                         _a.sent();
                         this.currentGame.end();
-                        this.end();
-                        return [2 /*return*/];
+                        return [4 /*yield*/, promptSelect('ゲームを続けますか？', nextActions)];
+                    case 3:
+                        action = _a.sent();
+                        if (!(action === 'play again')) return [3 /*break*/, 5];
+                        return [4 /*yield*/, this.play()];
+                    case 4:
+                        _a.sent();
+                        return [3 /*break*/, 6];
+                    case 5:
+                        if (action === 'exit') {
+                            this.end();
+                        }
+                        else {
+                            neverValue = action;
+                            throw new Error(neverValue + " is an invalid action.");
+                        }
+                        _a.label = 6;
+                    case 6: return [2 /*return*/];
                 }
             });
         });
