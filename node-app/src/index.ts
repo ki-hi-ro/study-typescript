@@ -90,7 +90,7 @@ class GameProcedure {
 const modes = ['normal', 'hard'] as const
 type Mode = typeof modes[number]
 
-class HitAndBlow {
+class HitAndBlow implements Game {
   private readonly answerSource = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
   private answer: string[] = []
   private tryCount = 0
@@ -181,7 +181,7 @@ class HitAndBlow {
 const jankenOptions = ['rock', 'paper', 'scissors'] as const
 type JankenOption = typeof jankenOptions[number]
 
-class Janken {
+class Janken implements Game {
   private rounds = 0
   private currentRound = 1
   private result = {
