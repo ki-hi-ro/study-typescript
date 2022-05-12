@@ -31,6 +31,10 @@ const promptSelect = async <T extends string>(text: string, values: readonly T[]
 const nextActions = ['play again', 'change game', 'exit'] as const
 type NextAction = typeof nextActions[number]
 
+abstract class Game {
+  
+} 
+
 const gameTitles = ['hit and blow', 'janken'] as const
 type GameTitle = typeof gameTitles[number]
 
